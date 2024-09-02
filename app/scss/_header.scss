@@ -8,8 +8,12 @@
 
   &__logo {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
+
+    img {
+      height: 3.5rem;
+    }
   }
 
   &__content {
@@ -23,22 +27,22 @@
     color: $whiteColor;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     span {
       display: block;
     }
 
     &-top {
-      font-size: 60px;
-      letter-spacing: 35px;
+      font-size: 6rem;
+      letter-spacing: 3.5rem;
       animation: moveToRight 1s ease-out;
     }
 
     &-bottom {
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 17.4px;
+      letter-spacing: 1.74rem;
       animation: moveToLeft 1s ease-out;
     }
   }

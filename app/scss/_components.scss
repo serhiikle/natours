@@ -1,15 +1,9 @@
-//================ LOGO =====================
-
-.logo {
-  height: 35px;
-}
-
 //================ MENU =====================
 
 .menu {
   &__list {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     text-transform: uppercase;
   }
 
@@ -21,9 +15,9 @@
       content: "";
       position: absolute;
       width: 0;
-      height: 3px;
+      height: 0.3rem;
       background-color: $accentColor;
-      bottom: -4px;
+      bottom: -0.4rem;
       transition: width .4s;
     }
 
@@ -46,8 +40,8 @@
   display: none;
   border: none;
   background-color: transparent;
-  width: 30px;
-  height: 20px;
+  width: 3rem;
+  height: 2rem;
   justify-content: space-between;
   flex-direction: column;
   padding: 0;
@@ -71,8 +65,8 @@
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
   transition: all .2s;
   position: relative;
   // for tag button
@@ -80,8 +74,8 @@
   border: none;
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($blackColor, .2);
+    transform: translateY(3px);
+    box-shadow: 0 1rem 2rem rgba($blackColor, .2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -90,8 +84,8 @@
   }
 
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($blackColor, .2);
+    transform: translateY(1px);
+    box-shadow: 0 0.5rem 1rem rgba($blackColor, .2);
   }
 
   &::after {
@@ -102,14 +96,10 @@
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 100px;
+    border-radius: 10rem;
     z-index: -1;
     transition: all .4s;
   }
-}
-
-.button:hover::after {
-
 }
 
 .button--white {
@@ -129,31 +119,31 @@
 //================ FORM =====================
 
 .form {
-  padding: 70px 40px;
+  padding: 7rem 4rem;
   background-color: #fff;
-  box-shadow: 0 4px 11px rgba(199, 175, 165, 0.30);
-  margin-top: 110px;
+  box-shadow: 0 0.4rem 1.1rem rgba(199, 175, 165, 0.30);
+  margin-top: 11rem;
 
   &__title {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-family: "Yeseva One", serif;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
   }
 
   &__email {
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
   }
 
   input {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #000;
     color: $secondaryBgColor;
-    padding: 0 10px;
-    font-size: 16px;
+    padding: 0 1rem;
+    font-size: 1.6rem;
 
     &::placeholder {
       color: $darkColor;
@@ -171,13 +161,13 @@
 .accordeon {
   &__item {
     &:not(:first-child) {
-      margin-top: 10px;
+      margin-top: 1rem;
     }
   }
 
   &__title {
-    padding: 16px 53px 16px 13px;
-    font-size: 16px;
+    padding: 1.6rem 5.3rem 1.6rem 1.3rem;
+    font-size: 1.6rem;
     font-family: "Yeseva One", serif;
     background-color: #fff;
     position: relative;
@@ -187,12 +177,12 @@
     &::after {
       content: "";
       position: absolute;
-      width: 16px;
-      height: 16px;
+      width: 1.6rem;
+      height: 1.6rem;
       background-image: url(../images/src/arrow-down.svg);
       background-repeat: no-repeat;
       background-position: center center;
-      right: 16px;
+      right: 1.6rem;
       top: 50%;
       transform: translateY(-50%) rotate(0deg);
       transition: transform .3s;
@@ -209,7 +199,7 @@
 
   &__list {
     list-style: decimal;
-    padding: 0 6px 12px 20px;
+    padding: 0 0.6rem 1.2rem 2rem;
   }
 }
 

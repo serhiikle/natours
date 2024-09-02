@@ -2,10 +2,10 @@
 @keyframes moveToRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -17,10 +17,10 @@
 @keyframes moveToLeft {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -32,7 +32,7 @@
 @keyframes moveToTop {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(5rem);
   }
   100% {
     opacity: 1;
