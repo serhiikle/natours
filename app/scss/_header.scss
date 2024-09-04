@@ -1,6 +1,6 @@
 .header {
   height: 95vh;
-  @include sectionBg("../images/hero.webp");
+  @include gradient(to right bottom, $primaryColorLight, $primaryColorDark, .8, "../images/hero.webp");
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 

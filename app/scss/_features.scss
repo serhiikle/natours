@@ -1,6 +1,6 @@
 .features {
   padding: 20rem 0;
-  @include sectionBg("../images/nat-4.webp");
+  @include gradient(to right bottom, $primaryColorLight, $primaryColorDark, .8, "../images/nat-4.webp");
   transform: skewY(-7deg);
   margin-top: -11rem;
 

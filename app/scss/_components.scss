@@ -116,6 +116,7 @@
 
 //================ CARD =====================
 
+//card
 .card {
   background-color: rgb($whiteColor, .8);
   font-size: 1.5rem;
@@ -140,5 +141,119 @@
     background-clip: text;
     color: transparent;
     margin-bottom: .5rem;
+  }
+}
+
+//tour-card
+.tour-card {
+  min-height: 52.2rem;
+  position: relative;
+  perspective: 150rem;
+  width: 30rem;
+  padding: 2rem;
+
+  &__side {
+    min-height: 52.2rem;
+    width: 30rem;
+    transition: all .8s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+
+
+
+    &--front {
+      box-shadow: $boxShadowSmall;
+    }
+
+    &--back {
+      transform: rotateY(-180deg);
+      box-shadow: $boxShadowSmall;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    height: 23rem;
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+
+    &-title {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $whiteColor;
+      position: absolute;
+      top: 14rem;
+      right: 2rem;
+      z-index: 10;
+
+
+      span {
+        display: block;
+        padding: 1rem 1.5rem;
+        text-align: right;
+        line-height: 0.9;
+        margin-top: -.5rem;
+      }
+    }
+  }
+
+  &__text {}
+
+  &__price {}
+
+  &__list {
+    padding: 3rem;
+    margin: 0 auto;
+    width: 80%;
+
+    &-item {
+      padding: 1rem;
+      font-size: 1.5rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $greyColor;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // .tour-card.card--yellow
+  &.card--yellow {
+    .tour-card__side--back {
+      @include gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark);
+      display: flex;
+      justify-content: center;
+      color: $whiteColor;
+    }
+
+    .tour-card__image {
+      @include gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark, 1, "../images/nat-5.webp");
+
+      &-title {
+        span {
+          @include gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark, .85);
+        }
+      }
+    }
   }
 }

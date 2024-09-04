@@ -1,5 +1,24 @@
-@mixin sectionBg($img) {
-  background-image: $primaryGradient, url($img);
-  background-size: cover;
-  background-position: left top;
+//@mixin sectionBg($img) {
+//  background-image: $primaryGradient, url($img);
+//  background-size: cover;
+//  background-position: left top;
+//}
+
+@mixin gradient ($direction, $firstColor, $secondColor, $opacity: 1, $img: "") {
+  // with opacity ang with image
+  @if ($opacity != 1 and $img != "") {
+    background-image: linear-gradient($direction, rgba($firstColor, $opacity), rgba($secondColor, $opacity)), url($img);
+  }
+  // without opacity and with image
+  @else if ($opacity == 1 and $img != "") {
+    background-image: linear-gradient($direction, $firstColor, $secondColor), url($img);
+  }
+  // with opacity and without image
+  @else if ($opacity != 1 and $img == "") {
+    background-image: linear-gradient($direction, rgba($firstColor, $opacity), rgba($secondColor, $opacity));
+  }
+  // without opacity and without image
+  @else {
+    background-image: linear-gradient($direction, $firstColor, $secondColor);
+  }
 }
