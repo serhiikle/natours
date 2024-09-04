@@ -1,62 +1,3 @@
-//================ MENU =====================
-
-.menu {
-  &__list {
-    display: flex;
-    gap: 2rem;
-    text-transform: uppercase;
-  }
-
-  &__item {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0.3rem;
-      background-color: $accentColor;
-      bottom: -0.4rem;
-      transition: width .4s;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      width: 50%;
-    }
-  }
-}
-
-.burger-menu-btn {
-  display: none;
-  border: none;
-  background-color: transparent;
-  width: 3rem;
-  height: 2rem;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0;
-  cursor: pointer;
-  z-index: 9999;
-
-  span {
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    background-color: $accentColor;
-
-  }
-}
-
 //================ BUTTON =====================
 
 .button,
@@ -75,7 +16,7 @@
 
   &:hover {
     transform: translateY(3px);
-    box-shadow: 0 1rem 2rem rgba($blackColor, .2);
+    box-shadow: $boxShadowDefault;
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -85,7 +26,7 @@
 
   &:active {
     transform: translateY(1px);
-    box-shadow: 0 0.5rem 1rem rgba($blackColor, .2);
+    box-shadow: $boxShadowActive;
   }
 
   &::after {
@@ -104,7 +45,7 @@
 
 .button--white {
   background-color: $whiteColor;
-  color: $mainColor;
+  color: $mainTextColor;
 
   &::after {
     background-color: $whiteColor;
@@ -116,93 +57,58 @@
   animation-fill-mode: backwards;
 }
 
-//================ FORM =====================
-
-.form {
-  padding: 7rem 4rem;
-  background-color: #fff;
-  box-shadow: 0 0.4rem 1.1rem rgba(199, 175, 165, 0.30);
-  margin-top: 11rem;
-
-  &__title {
-    font-size: 2.5rem;
-    font-family: "Yeseva One", serif;
-    text-align: center;
-    margin-bottom: 5rem;
+.btn {
+  transition: all .3s ease-in;
+  &:link,
+  &:visited {
+    color: $primaryColorDarken;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $primaryColorDarken;
+    padding: 3px;
   }
 
-  &__email {
-    margin-bottom: 5rem;
-  }
+  &:hover {
+    background-color: $primaryColorDarken;
+    color: $whiteColor;
+    box-shadow: $boxShadowDefault;
+    transform: translateY(-2px);
 
-  input {
-    width: 100%;
-    height: 5rem;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid #000;
-    color: $secondaryBgColor;
-    padding: 0 1rem;
-    font-size: 1.6rem;
-
-    &::placeholder {
-      color: $darkColor;
-      letter-spacing: 1px;
-    }
-
-    &:focus {
-      outline: 1px solid rgba($accentColor, .3);
+    &:active {
+      box-shadow: $boxShadowActive;
+      transform: translateY(-2px);
     }
   }
 }
 
-//================ ACCORDEON =====================
+//================ TITLE =====================
 
-.accordeon {
-  &__item {
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
-  }
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-  &__title {
-    padding: 1.6rem 5.3rem 1.6rem 1.3rem;
-    font-size: 1.6rem;
-    font-family: "Yeseva One", serif;
-    background-color: #fff;
-    position: relative;
-    // box-shadow: 0px 4px 11px 0px rgba(199, 175, 165, 0.30);
-    cursor: pointer;
+.title--extra-large {
+  display: inline-block;
+  font-size: 3.5rem;
+  background-image: linear-gradient(to right, $primaryColorLight, $primaryColorDark);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: transform .3s ease-out;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 1.6rem;
-      height: 1.6rem;
-      background-image: url(../images/src/arrow-down.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      right: 1.6rem;
-      top: 50%;
-      transform: translateY(-50%) rotate(0deg);
-      transition: transform .3s;
-    }
-  }
-
-  &__text {
-    background-color: #fff;
-    line-height: 1.5;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s;
-  }
-
-  &__list {
-    list-style: decimal;
-    padding: 0 0.6rem 1.2rem 2rem;
+  &:hover {
+    transform: skew(15deg, 2deg) scale(1.1);
+    text-shadow: $textShadowDefault;
   }
 }
 
-.accordeon__title.accordeon__title--active::after {
-  transform: translateY(-50%) rotate(180deg);
+.title--large {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
+
+.title--medium {}
+
+.title--small {}
