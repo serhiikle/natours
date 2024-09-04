@@ -1,0 +1,5 @@
+@mixin sectionBg($img) {
+  background-image: $primaryGradient, url($img);
+  background-size: cover;
+  background-position: left top;
+}

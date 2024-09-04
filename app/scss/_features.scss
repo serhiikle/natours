@@ -1,0 +1,13 @@
+.features {
+  padding: 20rem 0;
+  @include sectionBg("../images/nat-4.webp");
+  transform: skewY(-7deg);
+  margin-top: -11rem;
+
+  &__wrapper {
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(4, 1fr);
+    transform: skewY(7deg);
+  }
+}

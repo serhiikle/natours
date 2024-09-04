@@ -19,20 +19,6 @@ $boxShadowMedium: 0 1.5rem 4rem rgba($blackColor, .4);
 
 $textShadowDefault: .5rem 1rem 2rem rgba($blackColor, .2);
 
-
-
-
-
-
-
-
-$secondaryBgColor: #a5978e;
-
-$secondaryColor: #333;
-
-
-
-$darkColor: #111;
-$tintColor: #aaa;
-
-$accentColor: #343444;
+// GRADIENTS
+$primaryGradient: linear-gradient(to right bottom, rgba($primaryColorLight, .8), rgba($primaryColorDark, .8));
+$textGradient: linear-gradient(to right, $primaryColorLight, $primaryColorDark);

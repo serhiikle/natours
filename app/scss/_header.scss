@@ -1,8 +1,6 @@
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba($primaryColorLight, .8), rgba($primaryColorDark, .8)), url(../images/hero.jpg);
-  background-size: cover;
-  background-position: left top;
+  @include sectionBg("../images/hero.webp");
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
