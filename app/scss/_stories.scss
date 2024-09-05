@@ -1,6 +1,7 @@
 .stories {
   padding: 15rem 0;
   text-align: center;
+  position: relative;
 
   &__title {
     margin-bottom: 8rem;
@@ -8,5 +9,6 @@
   
   &__wrapper {
     text-align: left;
+    margin-bottom: 6rem;
   }
 }

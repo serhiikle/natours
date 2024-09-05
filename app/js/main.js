@@ -62,7 +62,7 @@
 //   });
 // });
 
-/* smooth scroling */
+/* smooth scrolling */
 
 // const allLinks = document.querySelectorAll('a:link');
 
