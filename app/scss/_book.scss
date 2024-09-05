@@ -1,0 +1,16 @@
+.book {
+  padding: 15rem 0;
+  @include gradient(to right bottom, $primaryColorLight, $primaryColorDark);
+
+  &__wrapper {
+    background-image: url(../images/nat-10.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .2));
+  }
+
+  &__inner {}
+
+  &__title {}
+}
