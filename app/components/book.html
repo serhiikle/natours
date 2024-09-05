@@ -3,7 +3,40 @@
       <div class="container">
         <div class="book__wrapper">
           <form action="#" class="form">
-            <h2 class="book__title title title--extra-large">We make people genuinely happy</h2>
+            <h2 class="form__title title title--extra-large">Start booking now!</h2>
+            <!-- name -->
+            <fieldset class="form__group">
+              <input type="text" class="form__input" name="name" id="name" placeholder="Full name" required>
+              <label for="name" class="form__label">Full name</label>
+            </fieldset>
+            <!-- email -->
+            <fieldset class="form__group">
+              <input type="email" class="form__input" name="email" id="email" placeholder="Email address" required>
+              <label for="email" class="form__label">Email address</label>
+            </fieldset>
+            <!-- radio -->
+             <fieldset class="form__group">
+              <!-- radio small -->
+              <div class="form__group-box">
+                <input type="radio" class="form__radio" id="small" name="size">
+                <label for="small" class="form__label-radio">
+                  <span class="form__radio-btn"></span>
+                  Small tour group
+                </label>
+              </div>
+              <!-- radio large -->
+              <div class="form__group-box">
+                <input type="radio" class="form__radio" id="large" name="size">
+                <label for="large" class="form__label-radio">
+                  <span class="form__radio-btn"></span>
+                  Large tour group
+                </label>
+              </div>
+             </fieldset>
+             <!-- button -->
+              <fieldset class="form__group">
+                <button class="button button--green">Next step &rarr;</button>
+              </fieldset>
           </form>
         </div>
       </div>

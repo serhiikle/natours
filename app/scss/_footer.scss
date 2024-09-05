@@ -1,6 +1,58 @@
 .footer {
+  background-color: $footerBgColor;
+  padding: 10rem 0;
+  font-size: 1.4rem;
 
-  &__wrapper {
-    padding-block: 4rem;
+  &__logo {
+    margin-bottom: 8rem;
+
+    &-item {
+      margin: 0 auto;
+      width: 15rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    padding-top: 2rem;
+    border-top: solid 1px $mainTextColor;
+
+    &-list {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &-link {
+      display: inline-block;
+      transition: transform 0.2s;
+
+      &:link,
+      &:visited {
+        text-transform: uppercase;
+        color: $greyColor;
+      }
+
+      &:hover,
+      &:active {
+        color: $primaryColorDark;
+        @include shadow(0, 1rem, 2rem, rgba($blackColor, .8));
+        transform: rotateZ(8deg) scale(1.1);
+      }
+    }
+  }
+
+  &__copy {
+    padding-top: 2rem;
+    border-top: solid 1px $mainTextColor;
+
+    color: $placeholderColor;
+    &-link {
+      color: $greyColor;
+      text-transform: uppercase;
+    }
   }
 }
