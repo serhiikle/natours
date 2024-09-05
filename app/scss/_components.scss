@@ -52,6 +52,15 @@
   }
 }
 
+.button--green {
+  background-color: $primaryColorDark;
+  color: $whiteColor;
+
+  &::after {
+    background-color: $primaryColorDark;
+  }
+}
+
 .button--animated {
   animation: moveToTop .5s ease-out .7s;
   animation-fill-mode: backwards;
@@ -187,6 +196,8 @@
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     position: relative;
 
     &-title {
@@ -210,9 +221,16 @@
     }
   }
 
-  &__text {}
+  &__text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
 
-  &__price {}
+  &__price {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 5rem;
+  }
 
   &__list {
     padding: 3rem;
@@ -252,6 +270,44 @@
       &-title {
         span {
           @include gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark, .85);
+        }
+      }
+    }
+  }
+  // .tour-card.card--green
+  &.card--green {
+    .tour-card__side--back {
+      @include gradient(to right bottom, $primaryColorLight, $primaryColorLight);
+      display: flex;
+      justify-content: center;
+      color: $whiteColor;
+    }
+
+    .tour-card__image {
+      @include gradient(to right bottom, $primaryColorLight, $primaryColorLight, 1, "../images/nat-6.webp");
+
+      &-title {
+        span {
+          @include gradient(to right bottom, $primaryColorLight, $primaryColorLight, .85);
+        }
+      }
+    }
+  }
+  // .tour-card.card--blue
+  &.card--blue {
+    .tour-card__side--back {
+      @include gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark);
+      display: flex;
+      justify-content: center;
+      color: $whiteColor;
+    }
+
+    .tour-card__image {
+      @include gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark, 1, "../images/nat-7.webp");
+
+      &-title {
+        span {
+          @include gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark, .85);
         }
       }
     }
