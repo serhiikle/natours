@@ -1,4 +1,6 @@
-//================ BUTTON =====================
+//===============================================================================
+// ================================ BUTTON ======================================
+//===============================================================================
 
 .button,
 .button:link,
@@ -16,7 +18,7 @@
 
   &:hover {
     transform: translateY(3px);
-    box-shadow: $boxShadowDefault;
+    @include shadow(0, 1rem, 2rem, rgba($blackColor, .2));
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -26,7 +28,7 @@
 
   &:active {
     transform: translateY(1px);
-    box-shadow: $boxShadowActive;
+    @include shadow(0, .5rem, 1rem, rgba($blackColor, .2));
   }
 
   &::after {
@@ -80,17 +82,19 @@
   &:hover {
     background-color: $primaryColorDarken;
     color: $whiteColor;
-    box-shadow: $boxShadowDefault;
+    @include shadow(0, 1rem, 2rem, rgba($blackColor, .2));
     transform: translateY(-2px);
 
     &:active {
-      box-shadow: $boxShadowActive;
+      @include shadow(0, .5rem, 1rem, rgba($blackColor, .2));
       transform: translateY(-2px);
     }
   }
 }
 
-//================ TITLE =====================
+//===============================================================================
+// ================================ TITLE =======================================
+//===============================================================================
 
 .title {
   text-transform: uppercase;
@@ -100,7 +104,7 @@
 .title--extra-large {
   display: inline-block;
   font-size: 3.5rem;
-  background-image: $textGradient;
+  @include gradient(to right, $primaryColorLight, $primaryColorDark);
   background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
@@ -108,7 +112,9 @@
 
   &:hover {
     transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: $textShadowDefault;
+    //text-shadow: $textShadowDefault;
+    @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .15), text);
+
   }
 }
 
@@ -123,7 +129,9 @@
 .title--small {}
 
 
-//================ CARD =====================
+//===============================================================================
+// ================================ CARD ========================================
+//===============================================================================
 
 //card
 .card {
@@ -132,7 +140,7 @@
   padding: 2.5rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: $boxShadowLarge;
+  @include shadow(0, 2.5rem, 4rem, rgba($blackColor, .5));
   transition: transform .3s ease-out;
 
   &:hover {
@@ -146,7 +154,7 @@
   &__icon {
     font-size: 6rem;
     display: inline-block;
-    background-image: $textGradient;
+    @include gradient(to right, $primaryColorLight, $primaryColorDark);
     background-clip: text;
     color: transparent;
     margin-bottom: .5rem;
@@ -174,12 +182,12 @@
 
 
     &--front {
-      box-shadow: $boxShadowSmall;
+      @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .15));
     }
 
     &--back {
       transform: rotateY(-180deg);
-      box-shadow: $boxShadowSmall;
+      @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .15));
     }
 
     &-wrapper {
@@ -310,6 +318,41 @@
           @include gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark, .85);
         }
       }
+    }
+  }
+}
+
+//===============================================================================
+// ================================ STORY =======================================
+//===============================================================================
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: $whiteColor;
+  border-radius: 3px;
+  @include shadow(0, 3rem, 6rem, rgba($blackColor, .1));
+  padding: 3rem;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__image {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 3rem;
+
+    img {
+      height: 100%;
     }
   }
 }

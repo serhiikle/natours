@@ -27,7 +27,7 @@
 
     &-item {
       width: 55%;
-      box-shadow: $boxShadowMedium;
+      @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .4));
       position: absolute;
       display: block;
       z-index: 5;

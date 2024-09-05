@@ -15,16 +15,3 @@ $mainTextColor: #777;
 $whiteColor: #fff;
 $blackColor: #000;
 $greyColor: #eee;
-
-// SHADOWS
-$boxShadowDefault: 0 1rem 2rem rgba($blackColor, .2);
-$boxShadowActive: 0 .5rem 1rem rgba($blackColor, .2);
-$boxShadowLarge: 0 2.5rem 4rem rgba($blackColor, .5);
-$boxShadowMedium: 0 1.5rem 4rem rgba($blackColor, .4);
-$boxShadowSmall: 0 1.5rem 4rem rgba($blackColor, .15);
-
-$textShadowDefault: .5rem 1rem 2rem rgba($blackColor, .2);
-
-// GRADIENTS
-$primaryGradient: linear-gradient(to right bottom, rgba($primaryColorLight, .8), rgba($primaryColorDark, .8));
-$textGradient: linear-gradient(to right, $primaryColorLight, $primaryColorDark);
