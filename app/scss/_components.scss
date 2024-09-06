@@ -512,3 +512,107 @@
 .form__radio:checked ~ .form__label-radio .form__radio-btn::after {
   opacity: 1;
 }
+
+//===============================================================================
+// ============================== NAVIGATION ====================================
+//===============================================================================
+
+.navigation {
+  // .navigation__checkbox
+  &__checkbox {
+    display: none;
+  }
+
+  // .navigation__button
+  &__button {
+    background-color: $whiteColor;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    @include shadow(0, 1rem, 3rem, rgba($blackColor, .1));
+    cursor: pointer;
+  }
+
+  // .navigation__background
+  &__background {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($primaryColorLight, $primaryColorDark);
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(.86, 0, .07, 1);
+  }
+
+  // .navigation__box
+  &__box {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    //hide menu
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(.68, -.55, .265, 1.55);
+  }
+
+  // .navigation__list
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  // .navigation__item
+  &__item {
+    margin: 1rem;
+  }
+
+  // .navigation__link  
+  &__link {
+    transition: all .4s;
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
+
+    &:link,
+    &:visited {
+      padding: 1rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $whiteColor;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $whiteColor 50%);
+      background-size: 230%;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $primaryColorDark;
+      transform: translateX(1rem);
+    }
+  }
+}
+
+// show menu
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100);
+}
+
+.navigation__checkbox:checked ~ .navigation__box {
+  opacity: 1;
+  width: 100vw;
+}
