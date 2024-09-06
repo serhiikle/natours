@@ -17,7 +17,11 @@
   <!-- SECTION HEADER -->
    <div class="navigation">
     <input class="navigation__checkbox" type="checkbox" id="nav-toggle">
-    <label class="navigation__button" for="nav-toggle">MENU</label>
+    <label class="navigation__button" for="nav-toggle">
+      <span class="navigation__button-line navigation__button-line--top"></span>
+      <span class="navigation__button-line navigation__button-line--middle"></span>
+      <span class="navigation__button-line navigation__button-line--bottom"></span>
+    </label>
     <div class="navigation__background">&nbsp;</div>
     <nav class="navigation__box">
       <ul class="navigation__list">
@@ -37,7 +41,7 @@
 <!--  header content  -->
     <div class="header__content">
       <h1 class="header__title"><span class="header__title-top">Outdoors</span><span class="header__title-bottom">is where life happens</span></h1>
-      <div class="header__button"><a href="#" class="button button--white button--animated">Discover our tours</a></div>
+      <div class="header__button"><a href="#popup" class="button button--white button--animated">Discover our tours</a></div>
     </div>
   </header>
   <main>
@@ -136,7 +140,7 @@
                 <div class="tour-card__side-wrapper">
                   <p class="tour-card__text">only</p>
                   <div class="tour-card__price">$297</div>
-                  <a href="#" class="button button--white">Book now!</a>
+                  <a href="#popup" class="button button--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -159,7 +163,7 @@
                 <div class="tour-card__side-wrapper">
                   <p class="tour-card__text">only</p>
                   <div class="tour-card__price">$497</div>
-                  <a href="#" class="button button--white">Book now!</a>
+                  <a href="#popup" class="button button--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -182,13 +186,13 @@
                 <div class="tour-card__side-wrapper">
                   <p class="tour-card__text">only</p>
                   <div class="tour-card__price">$897</div>
-                  <a href="#" class="button button--white">Book now!</a>
+                  <a href="#popup" class="button button--white">Book now!</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a href="#" class="button button--green">Discover all tours</a>
+        <a href="#popup" class="button button--green">Discover all tours</a>
       </div>
     </section>
     <!-- SECTION STORIES -->
@@ -301,6 +305,30 @@
       </div>
     </div>
   </footer>
+
+  <!-- popup -->
+   <div class="popup" id="popup">
+    <div class="popup__wrapper">
+      <div class="popup__inner">
+        <div class="popup__image">
+          <img src="./images/nat-8.jpg" alt="Photo people on atour">
+          <img src="./images/nat-9.jpg" alt="Photo people on atour">
+        </div>
+        <div class="popup__content">
+          <a class="popup__close" href="#tours">&times;</a>
+          <h2 class="popup__title title title--extra-large">Start booking now</h2>
+          <h3 class="popup__title-second title title-large">Important &mdash; please read these terms before booking</h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, reiciendis in nisi, eligendi dolores sapiente assumenda dicta optio libero illo voluptatem tenetur numquam necessitatibus nulla qui quam earum ducimus alias!
+            Eaque, esse animi tempore nostrum id nemo quos impedit quod molestiae aut repellendus quam porro voluptatem laboriosam. Iste optio perspiciatis error cum corrupti facere harum eius voluptatum ex, libero ut?
+            Fuga repudiandae exercitationem aperiam eius facilis. Libero illo voluptatem tenetur numquam necessitatibus nulla qui.
+            <div class="popup__button">
+              <a class="button button--green" href="#">book now</a>
+            </div>
+        </div>
+      </div>
+    </div>
+   </div>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script src="js/main.min.js"></script>
