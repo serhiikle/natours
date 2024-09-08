@@ -11,7 +11,10 @@
 ===========================================================================*/
 
 @media (max-width: 75em) {
-  
+
+  html {
+    font-size: 56.25%;
+  }
 }
 
 /* ==========================================================================
@@ -29,6 +32,27 @@
 
 @media (max-width: 62.5em) {
 
+  .tours__wrapper {
+    gap: 2rem;
+  }
+
+  .form {
+    &__group {
+      &-box {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 2.8rem;
+    }
+  }
+
+  .popup {
+    &__text {
+      column-count: 1 ;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -37,6 +61,35 @@
 
 @media (max-width: 58.75em) {
 
+  .features__wrapper {
+    gap: 2rem;
+  }
+
+  .popup {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      padding: 4rem 2rem;
+    }
+
+    &__title {
+      text-align: center;
+
+      &-second {
+        text-align: center;
+      }
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -45,6 +98,9 @@
 
 @media (max-width: 56.25em) {
 
+  html {
+    font-size: 50%;
+  }
 }
 
 /* ==========================================================================
@@ -61,6 +117,23 @@
 
 @media (max-width: 51.25em) {
 
+  .tour-card {
+    width: 25rem;
+
+    &__side {
+      width: 25rem;
+    }
+
+    &__list {
+      padding: 3rem 0;
+    }
+  }
+
+  .footer__content {
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================
@@ -69,6 +142,37 @@
 
 @media (max-width: 48em) {
 
+  body {
+    padding: 0;
+  }
+
+  .navigation {
+    &__button {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    &__background {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+  }
+
+  .about {
+    padding: 25rem 0 60rem;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+    }
+
+    &__images {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 85%;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -77,6 +181,13 @@
 
 @media (max-width: 40em) {
 
+  html {
+    font-size: 37.5%;
+  }
+
+  .navigation__checkbox:checked+.navigation__button .navigation__button-line--top {
+    transform: rotate(405deg) translate(2px, 2px);
+  }
 }
 
 /* ==========================================================================
@@ -93,6 +204,40 @@
 
 @media (max-width: 31.25em) {
 
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
+  .features__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  .card {
+    margin: 0 auto;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
+
+  .form {
+    width: 100%;
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  .book {
+    &__wrapper {
+      @include gradient(to right, $whiteColor, $whiteColor, .8, "../images/nat-10.webp");
+    }
+  }
 }
 
 /* ==========================================================================
@@ -101,6 +246,41 @@
 
 @media (max-width: 30em) {
 
+  .about {
+    padding: 25rem 0 55rem;
+
+    &__content {
+      text-align: center;
+    }
+  }
+
+  .tours {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+    }
+  }
+
+  .tour-card {
+    width: 35rem;
+    margin: 0 auto;
+
+    &__side {
+      width: 35rem;
+    }
+
+    &__image {
+      &-title {
+        font-size: 4rem;
+      }
+    }
+
+    &__list {
+      &-item {
+        font-size: 2rem;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
@@ -109,6 +289,74 @@
 
 @media (max-width: 25.625em) {
 
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+
+    &__content {
+      top: 50%;
+    }
+
+    &__title {
+      text-align: center;
+
+      &-top {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        letter-spacing: 2.8rem;
+      }
+  
+      &-bottom {
+        font-size: 1.8rem;
+        letter-spacing: 0.7rem;
+      }
+    }
+  }
+
+  .navigation {
+    &__list {
+      width: 100%;
+    }
+  }
+
+  .about {
+    padding: 25rem 0 50rem;
+
+    &__content {
+      &-title {
+        font-size: 2.4rem;
+      }
+
+      &-text {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .btn {
+    font-size: 2.4rem;
+  }
+
+  .story {
+    width: 100%;
+    padding: 2rem;
+    transform: skewX(0);
+
+    & > * {
+      transform: skewX(0);
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
+
+  .form {
+    padding: 3rem;
+  }
 }
 
 /* ==========================================================================
@@ -117,6 +365,13 @@
 
 @media (max-width: 22.5em) {
 
+  .about {
+    padding: 25rem 0 45rem;
+  }
+
+  .features__wrapper { 
+    gap: 6rem 2rem;
+  }
 }
 
 /* ==========================================================================

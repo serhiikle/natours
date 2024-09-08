@@ -11,6 +11,9 @@ html {
 }
 
 body {
+  max-width: 256rem;
+  position: relative;
+  margin: 0 auto;
   background-color: $whiteColor;
   color: $mainTextColor;
   font-family: "Lato", sans-serif;

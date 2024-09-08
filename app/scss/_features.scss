@@ -3,6 +3,8 @@
   @include gradient(to right bottom, $primaryColorLight, $primaryColorDark, .8, "../images/nat-4.webp");
   transform: skewY(-7deg);
   margin-top: -11rem;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__wrapper {
     display: grid;

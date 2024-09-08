@@ -3,6 +3,8 @@
   @include gradient(to right bottom, $primaryColorLight, $primaryColorDark, .8, "../images/hero.webp");
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__logo {
     position: absolute;
