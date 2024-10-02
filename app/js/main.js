@@ -1,11 +1,20 @@
-/* Mobile menu */
+/* MOBILE MENU */
 
-// const menuBtn = document.querySelector('.burger-menu-btn');
-// const headerSection = document.querySelector('.header');
+const menuBtn = document.querySelector('.navigation__button');
+const headerSection = document.querySelector('.header');
+const allLinks = document.querySelectorAll('a');
 
-// menuBtn.addEventListener('click', () => {
-//   headerSection.classList.toggle('menu--open');
-// });
+menuBtn.addEventListener('click', () => {
+  headerSection.classList.toggle('menu--open');
+});
+
+allLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (link.classList.contains('navigation__link')) {
+      headerSection.classList.toggle('menu--open');
+    }
+  });
+});
 
 /* feedback slider */
 

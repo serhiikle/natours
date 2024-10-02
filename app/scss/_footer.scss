@@ -1,14 +1,14 @@
 .footer {
   background-color: $footerBgColor;
-  padding: 10rem 0;
+  padding-block: 10rem;
   font-size: 1.4rem;
 
   &__logo {
-    margin-bottom: 8rem;
+    margin-block-end: 8rem;
 
     &-item {
-      margin: 0 auto;
-      width: 15rem;
+      margin-inline: auto;
+      inline-size: 15rem;
     }
   }
 
@@ -18,7 +18,7 @@
   }
 
   &__nav {
-    padding-top: 2rem;
+    padding-block-start: 2rem;
     border-top: solid 1px $mainTextColor;
 
     &-list {
@@ -46,7 +46,7 @@
   }
 
   &__copy {
-    padding-top: 2rem;
+    padding-block-start: 2rem;
     border-top: solid 1px $mainTextColor;
 
     color: $placeholderColor;

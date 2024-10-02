@@ -35,8 +35,8 @@
     content: "";
     position: absolute;
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     top: 0;
     left: 0;
     border-radius: 10rem;
@@ -112,7 +112,6 @@
 
   &:hover {
     transform: skew(15deg, 2deg) scale(1.1);
-    //text-shadow: $textShadowDefault;
     @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .15), text);
 
   }
@@ -143,7 +142,7 @@
   }
 
   &__title {
-    margin-bottom: 1.5rem;
+    margin-block-end: 1.5rem;
   }
 
   &__icon {
@@ -152,21 +151,21 @@
     @include gradient(to right, $primaryColorLight, $primaryColorDark);
     background-clip: text;
     color: transparent;
-    margin-bottom: .5rem;
+    margin-block-end: .5rem;
   }
 }
 
 //tour-card
 .tour-card {
-  min-height: 52.2rem;
+  min-block-size: 52.2rem;
   position: relative;
   perspective: 150rem;
-  width: 30rem;
+  inline-size: 30rem;
   padding: 2rem;
 
   &__side {
-    min-height: 52.2rem;
-    width: 30rem;
+    min-block-size: 52.2rem;
+    inline-size: 30rem;
     transition: all .8s ease-in-out;
     position: absolute;
     top: 0;
@@ -194,7 +193,7 @@
   }
 
   &__image {
-    height: 23rem;
+    block-size: 23rem;
     background-blend-mode: screen;
     background-size: cover;
     background-position: center;
@@ -219,7 +218,7 @@
         padding: 1rem 1.5rem;
         text-align: right;
         line-height: 0.9;
-        margin-top: -.5rem;
+        margin-block-start: -.5rem;
       }
     }
   }
@@ -232,13 +231,13 @@
   &__price {
     font-size: 6rem;
     font-weight: 100;
-    margin-bottom: 5rem;
+    margin-block-end: 5rem;
   }
 
   &__list {
     padding: 3rem;
-    margin: 0 auto;
-    width: 80%;
+    margin-inline: auto;
+    inline-size: 80%;
 
     &-item {
       padding: 1rem;
@@ -322,8 +321,8 @@
 //===============================================================================
 
 .story {
-  width: 75%;
-  margin: 0 auto;
+  inline-size: 75%;
+  margin-inline: auto;
   background-color: rgba($whiteColor, .6);
   border-radius: 3px;
   @include shadow(0, 3rem, 6rem, rgba($blackColor, .1));
@@ -335,20 +334,20 @@
   }
 
   &__title {
-    margin-bottom: 1.5rem;
+    margin-block-end: 1.5rem;
   }
 
   &__image {
-    width: 15rem;
-    height: 15rem;
+    inline-size: 15rem;
+    block-size: 15rem;
     float: left;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    margin-right: 3rem;
+    margin-inline-end: 3rem;
     position: relative;
 
     img {
-      height: 100%;
+      block-size: 100%;
       transform: translateX(-4rem) scale(1.4);
       transition: all .4s ease-in-out;
     }
@@ -379,7 +378,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 6rem;
+    margin-block-end: 6rem;
   }
 }
 
@@ -391,15 +390,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   z-index: -1;
   opacity: .15;
   overflow: hidden;
 
   &__content {
-    height: 100%;
-    width: 100%;
+    block-size: 100%;
+    inline-size: 100%;
     object-fit: cover;
   }
 }
@@ -409,22 +408,22 @@
 //===============================================================================
 
 .form {
-  width: 50%;
+  inline-size: 50%;
   padding: 6rem;
 
   &__title {
-    margin-bottom: 4rem;
+    margin-block-end: 4rem;
   }
 
   &__group {
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-block-end: 2rem;
     }
 
     &-box {
-      width: 45%;
+      inline-size: 45%;
       display: inline-block;
-      margin-bottom: 4rem;
+      margin-block-end: 4rem;
     }
   }
 
@@ -438,7 +437,7 @@
     background-color: rgba($whiteColor, .5);
     border-bottom: solid 3px transparent;
     display: block;
-    width: 90%;
+    inline-size: 90%;
     transition: all .3s;
 
     &:focus {
@@ -466,14 +465,14 @@
     display: inline-block;
     font-size: 1.2rem;
     font-weight: 700;
-    margin-left: 2rem;
-    margin-top: .7rem;
+    margin-inline-start: 2rem;
+    margin-block-start: .7rem;
     transition: all .3s ease-out;
 
     &-radio {
       cursor: pointer;
       position: relative;
-      padding-left: 5rem;
+      padding-inline-start: 5rem;
     }
   }
 
@@ -481,8 +480,8 @@
     display: none;
 
     &-btn {
-      width: 3rem;
-      height: 3rem;
+      inline-size: 3rem;
+      block-size: 3rem;
       border: 5px solid $primaryColorDark;
       border-radius: 50%;
       display: inline-block;
@@ -495,8 +494,8 @@
         position: absolute;
         display: inline-block;
         border-radius: 50%;
-        height: 1.2rem;
-        width: 1.2rem;
+        block-size: 1.2rem;
+        inline-size: 1.2rem;
         background-color: $primaryColorDark;
         left: 50%;
         top: 50%;
@@ -518,16 +517,11 @@
 //===============================================================================
 
 .navigation {
-  // .navigation__checkbox
-  &__checkbox {
-    display: none;
-  }
-
   // .navigation__button
   &__button {
     background-color: $whiteColor;
-    width: 7rem;
-    height: 7rem;
+    inline-size: 7rem;
+    block-size: 7rem;
     border-radius: 50%;
     position: fixed;
     top: 6rem;
@@ -547,8 +541,8 @@
     }
 
     &-line {
-      width: 3rem;
-      height: 2px;
+      inline-size: 3rem;
+      block-size: 2px;
       background-color: $footerBgColor;
       display: inline-block;
       transition: all .5s;
@@ -630,31 +624,39 @@
 }
 
 // show menu
-.navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(100);
-}
+.header {
+  &.menu--open {
+    & .navigation__background {
+      transform: scale(100);
+    }
 
-.navigation__checkbox:checked ~ .navigation__box {
-  opacity: 1;
-  width: 100vw;
-}
+    & .navigation__box {
+      opacity: 1;
+      width: 100vw;
+    }
+    // animate burger menu
+    & .navigation__button {
+      gap: 0;
+      & .navigation__button-line--top {
+        transform: rotate(405deg);
+        position: absolute;
+      }
 
-// animate burger menu
+      & .navigation__button-line--middle {
+        display: none;
+        opacity: 0;
+      }
 
-.navigation__checkbox:checked + .navigation__button .navigation__button-line--top {
-  transform: rotate(405deg) translate(4px, 4px);
-}
+      & .navigation__button-line--bottom {
+        position: absolute;
+        transform: rotate(-405deg);
+      }
+    }
 
-.navigation__checkbox:checked + .navigation__button .navigation__button-line--middle {
-  display: none;
-  opacity: 0;
-}
-
-.navigation__checkbox:checked + .navigation__button .navigation__button-line--bottom {
-  transform: rotate(-405deg) translate(2px, -2px);;
-}
-.navigation__checkbox:checked + .navigation__button:hover {
-  gap: .7rem;
+    & .navigation__button:hover {
+      gap: .7rem;
+    }
+  } 
 }
 
 //===============================================================================
@@ -662,8 +664,8 @@
 //===============================================================================
 
 .popup {
-  height: 100vh;
-  width: 100vw;
+  block-size: 100vh;
+  inline-size: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -679,10 +681,14 @@
   &:target {
     opacity: 1;
     visibility: visible;
+    & .popup__wrapper {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &__wrapper {
-    width: 75%;
+    inline-size: 75%;
     background-color: $whiteColor;
     @include shadow(0, 2rem, 4rem, rgba($blackColor, .2));
     opacity: 0;
@@ -702,7 +708,7 @@
     flex-direction: column;
     
     img {
-      width: 100%;
+      inline-size: 100%;
       object-fit: cover;
     }
   }
@@ -717,12 +723,12 @@
 
   // .popup__title
   &__title {
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
   }
 
   // .popup__title-second
   &__title-second {
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
   }
 
   // .popup__text
@@ -736,7 +742,7 @@
 
   // .popup__button
   &__button {
-    margin-top: auto;
+    margin-block-start: auto;
   }
 
   &__close {
@@ -752,9 +758,4 @@
       color: $primaryColorDark;
     }
   }
-}
-
-.popup:target .popup__wrapper {
-  opacity: 1;
-  transform: scale(1);
 }

@@ -11,9 +11,9 @@ html {
 }
 
 body {
-  max-width: 256rem;
+  max-inline-size: 256rem;
   position: relative;
-  margin: 0 auto;
+  margin-inline: auto;
   background-color: $whiteColor;
   color: $mainTextColor;
   font-family: "Lato", sans-serif;
@@ -38,12 +38,20 @@ img {
 
 p {
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-block-end: 3rem;
   }
 }
 
 .container {
-  max-width: 118rem;
+  max-inline-size: 118rem;
   padding-inline: 2rem;
-  margin: 0 auto;
+  margin-inline: auto;
+}
+
+.about,
+.features,
+.tours,
+.stories,
+.book {
+  padding-block: 15rem;
 }

@@ -1,11 +1,9 @@
 .about {
   background-color: $mainBgColor;
-  padding: 25rem 0 30rem;
-  margin-top: -20vh;
   text-align: center;
 
   &__title {
-    margin-bottom: 8rem;
+    margin-block-end: 10rem;
   }
 
   &__wrapper {
@@ -18,7 +16,7 @@
     text-align: left;
 
     &-title {
-      margin-bottom: 1.5rem;
+      margin-block-end: 1.5rem;
     }
   }
 
@@ -26,7 +24,7 @@
       position: relative;
 
     &-item {
-      width: 55%;
+      inline-size: 55%;
       @include shadow(0, 1.5rem, 4rem, rgba($blackColor, .4));
       position: absolute;
       display: block;

@@ -1,5 +1,4 @@
 .book {
-  padding: 15rem 0;
   @include gradient(to right bottom, $primaryColorLight, $primaryColorDark);
 
   &__wrapper {

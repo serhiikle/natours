@@ -1,11 +1,9 @@
 .tours {
   background-color: $mainBgColor;
-  padding: 30rem 0 15rem;
-  margin-top: -11rem;
   text-align: center;
 
   &__title {
-    margin-bottom: 8rem;
+    margin-block-end: 8rem;
   }
 
   &__wrapper {
@@ -13,6 +11,6 @@
     grid-template-columns: repeat(3, auto);
     gap: 6rem;
     justify-content: center;
-    margin-bottom: 8rem;
+    margin-block-end: 8rem;
   }
 }

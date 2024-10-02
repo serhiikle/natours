@@ -1,8 +1,5 @@
 .features {
-  padding: 20rem 0;
   @include gradient(to right bottom, $primaryColorLight, $primaryColorDark, .8, "../images/nat-4.webp");
-  transform: skewY(-7deg);
-  margin-top: -11rem;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -10,6 +7,5 @@
     display: grid;
     gap: 6rem;
     grid-template-columns: repeat(4, 1fr);
-    transform: skewY(7deg);
   }
 }
